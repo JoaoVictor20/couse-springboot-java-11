@@ -28,6 +28,6 @@ public class OrderResourse {
 	@GetMapping(value = "/{id}")
 	public ResponseEntity<Order> findById(@PathVariable Long id) {
 		Order order = orderService.findById(id);
-		return ResponseEntity.ok(order);
+		return ResponseEntity.ok().body(order);
 	}
 }
